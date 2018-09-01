@@ -26,42 +26,17 @@ Webserver will be bootstrapped using the install.sh script which deploys the doc
 
 API usage:
 
-Get current values : curl http://ALB-DNS/api/v1.0/tasks
 
-Post new values : curl -i -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://ALB-DNS/api/v1.0/tasks"
+Endpoint: http://ALB-DNS/api/v1.0/tasks
+
+Get:  Display current tasks
+
+example: curl http://ALB-DNS/api/v1.0/tasks
+
+Post:  Post accepts two key pairs. Title and Description.
+
+example:
+
+curl -i -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://ALB-DNS/api/v1.0/tasks"
 
 Note: Replace ALB-DNS with the DNS name of the newly created ALB.
-Example:
-
-curl -i http://front-alb-1170548121.us-west-1.elb.amazonaws.com/api/v1.0/tasks
-
-{
-  "tasks": [
-    {
-      "description": "Im wearing bluejeans", 
-      "title": "bluejeans"
-    }
-  ]
-}
-
-curl -i -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://front-alb-1170548121.us-west-1.elb.amazonaws.com/api/v1.0/tasks"
-{
-  "task": {
-    "description": "Im wearing redjeans", 
-    "title": "redjeans"
-  }
-}
- 
- curl -i http://front-alb-1170548121.us-west-1.elb.amazonaws.com/api/v1.0/tasks
-{
-  "tasks": [
-    {
-      "description": "Im wearing bluejeans", 
-      "title": "bluejeans"
-    }, 
-    {
-      "description": "Im wearing redjeans", 
-      "title": "redjeans"
-    }
-  ]
-}
