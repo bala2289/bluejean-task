@@ -30,5 +30,5 @@ variable "ami" {
 
 variable "key_path" {
   description = "SSH Public Key path"
-  default     = "/Users/balasundaram.k/git/terraform/id_rsa_bluejeans.pub"
+  default     = ""
 }
