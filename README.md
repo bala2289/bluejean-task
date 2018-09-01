@@ -32,7 +32,7 @@ Webserver will be bootstrapped using the install.sh script which installs the de
 2. Install terraform based on your distribution. [Terraform](https://www.terraform.io/intro/getting-started/install.html)
 3. Initialize terraform
   $ cd bala2289/bluejeans-task; terraform init
-  ###### Note: ensure api keys have been added to provide.tf
+  Note: ensure api keys have been added to provide.tf
 4. terraform plan -out tf.out
 5. terraform apply "tf.out"
 
