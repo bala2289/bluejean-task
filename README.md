@@ -25,7 +25,7 @@ Please make the following changes before doing a terraform plan.
 Webserver will be bootstrapped using the install.sh script which installs the dependencies and deploys the docker image.
 
 
-#### Deploying the APP
+#### API server Deployment
 
 1. Clone the repository 
   $ git clone  git@github.com:bala2289/bluejeans-task.git
