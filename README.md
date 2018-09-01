@@ -1,10 +1,6 @@
 ### Bluejeans-task
 Dockerized API server deployed behind ALB in AWS
 
-Please make the following changes before doing a terraform plan.
-
-1. Add credentials and preferred region in the provider.tf file (or) export as environment variable
-2. Please ensure the path of the your ssh public key file in vars.tf.
 
 ### Description
 
@@ -23,6 +19,12 @@ Please make the following changes before doing a terraform plan.
   10. EIPs for NAT gw and bastion server
   
 Webserver will be bootstrapped using the install.sh script which installs the dependencies and deploys the docker image.
+
+#### Prerequisites  
+Please make the following changes before doing a terraform plan.
+
+1. Add api credentials and preferred region in the provider.tf file (or) export as environment variable.
+2. Please ensure the path of the your ssh public key file in vars.tf.
 
 
 #### API server Deployment
