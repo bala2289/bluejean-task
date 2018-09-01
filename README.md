@@ -22,11 +22,24 @@ Please make the following changes before doing a terraform plan.
   9. ALB and target group
   10. EIPs for NAT gw and bastion server
   
-Webserver will be bootstrapped using the install.sh script which deploys the docker image.
+Webserver will be bootstrapped using the install.sh script which installs the dependencies and deploys the docker image.
+
+
+#### Deploying the APP
+
+1. Clone the repository 
+  $ git clone  git@github.com:bala2289/bluejeans-task.git
+2. Install terraform based on your distribution. [Terraform](https://www.terraform.io/intro/getting-started/install.html)
+3. Initialize terraform
+  $ cd bala2289/bluejeans-task; terraform init
+  ###### Note: ensure api keys have been added to provide.tf
+4. terraform plan -out tf.out
+5. terraform apply "tf.out"
 
 
 ### API usage
 
+  Once the AWS infrastructure has been provisioned use the below endpoints to access tht API server.
 
 #### Endpoint: http://ALB-DNS/api/v1.0/tasks
 
@@ -44,14 +57,3 @@ curl -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"
 
 Note: Replace ALB-DNS with the DNS name of the newly created ALB.
 
-
-#### How to Deploy the APP
-
-1. Clone the repository 
-  $ git clone  git@github.com:bala2289/bluejeans-task.git
-2. Install terraform based on your distribution. [Terraform](https://www.terraform.io/intro/getting-started/install.html)
-3. Initialize terraform
-  cd bala2289/bluejeans-task; terraform init
-  ###### Note: ensure api keys have been added to provide.tf
-4. terraform plan -out tf.out
-5. terraform apply "tf.out"
