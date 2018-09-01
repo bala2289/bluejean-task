@@ -37,7 +37,7 @@ Webserver will be bootstrapped using the install.sh script which installs the de
 5. Apply the plan.
     **$ terraform apply "tf.out"**
 
-**Note:1 ensure api keys have been added to provider.tf before initializing terraform.**
+**Note:1 ensure api keys have been added to provider.tf before plan/apply.**
 
 
 ### API usage
