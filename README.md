@@ -38,6 +38,8 @@ Please make the following changes before doing a terraform plan.
     **$ terraform plan -out tf.out**
 5. Apply the plan.
     **$ terraform apply "tf.out"**
+6. Destroy the setup.
+    **$ terraform destroy
 
 **Note:1 ensure api keys have been added to provider.tf before plan/apply.**
 
