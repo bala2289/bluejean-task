@@ -20,5 +20,5 @@ Description:
   8. Bastion and Webserver
   9. ALB and target group
   
-Webserver will be bootstapped using the install.sh script which deploys the docker image.
+Webserver will be bootstrapped using the install.sh script which deploys the docker image.
   
