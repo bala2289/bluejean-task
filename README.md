@@ -4,7 +4,7 @@ Dockerized API server deployed behind ALB in AWS
 Please make the following changes before doing a terraform plan.
 
 1. Add credentials and preferred region in the provider.tf file (or) export as environment variable
-2. Use the provided ssh key or create new. Please ensure the path of the key file vars.tf.
+2. Please ensure the path of the your ssh public key file in vars.tf.
 
 ### Description
 
