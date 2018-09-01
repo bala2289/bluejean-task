@@ -31,10 +31,11 @@ Webserver will be bootstrapped using the install.sh script which installs the de
   $ git clone  git@github.com:bala2289/bluejeans-task.git
 2. Install terraform based on your distribution. [Terraform](https://www.terraform.io/intro/getting-started/install.html)
 3. Initialize terraform.
-$ cd bala2289/bluejeans-task; terraform init
-Note: ensure api keys have been added to provider.tf
+$ cd bala2289/bluejeans-task; terraform init.
 4. terraform plan -out tf.out
 5. terraform apply "tf.out"
+
+**Note:1 ensure api keys have been added to provider.tf before initializing terraform.
 
 
 ### API usage
@@ -51,5 +52,5 @@ Note: ensure api keys have been added to provider.tf
 
 **example:** curl -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://ALB-DNS/api/v1.0/tasks"
 
-**Note: Replace ALB-DNS with the DNS name of the newly created ALB.**
+**Note:2 Replace ALB-DNS with the DNS name of the newly created ALB.**
 
