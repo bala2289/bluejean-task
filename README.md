@@ -19,6 +19,15 @@ Description:
   7. Ssh keys
   8. Bastion and Webserver
   9. ALB and target group
+  10. EIPs for NAT gw and bastion server
   
 Webserver will be bootstrapped using the install.sh script which deploys the docker image.
+
+
+API usage:
+
+Get current values : curl http://ALB-DNS/api/v1.0/tasks
+
+Post new values : curl -i -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://ALB-DNS/api/v1.0/tasks"
+
   
