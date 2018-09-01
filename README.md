@@ -15,7 +15,7 @@ Please make the following changes before doing a terraform plan.
   2. Public and private subnets
   3. Public and private route tables
   4. NACL
-  5. Security groups for webserver, bastion server and ALB.
+  5. Security groups for webserver, bastion server and ALB
   6. Internet gateway and Nat gateway
   7. Ssh keys
   8. Bastion and Webserver
@@ -31,8 +31,8 @@ Webserver will be bootstrapped using the install.sh script which installs the de
   $ git clone  git@github.com:bala2289/bluejeans-task.git
 2. Install terraform based on your distribution. [Terraform](https://www.terraform.io/intro/getting-started/install.html)
 3. Initialize terraform.
-  $ cd bala2289/bluejeans-task; terraform init
-  Note: ensure api keys have been added to provider.tf
+$ cd bala2289/bluejeans-task; terraform init
+Note: ensure api keys have been added to provider.tf
 4. terraform plan -out tf.out
 5. terraform apply "tf.out"
 
@@ -43,11 +43,11 @@ Webserver will be bootstrapped using the install.sh script which installs the de
 
 **Endpoint: http://ALB-DNS/api/v1.0/tasks**
 
-##### Get:  Display current tasks
+#### Get:  Display current tasks
 
 **example:** curl http://ALB-DNS/api/v1.0/tasks
 
-##### Post:  Post accepts two key pairs. Title and Description.
+#### Post:  Post accepts two key pairs. Title and Description.
 
 **example:** curl -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://ALB-DNS/api/v1.0/tasks"
 
