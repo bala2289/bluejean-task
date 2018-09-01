@@ -4,7 +4,7 @@ resource "aws_alb" "alb_front" {
   internal                   = false
   security_groups            = ["${aws_security_group.sg-webALB.id}"]
   subnets                    = ["${aws_subnet.public-subnet.id}", "${aws_subnet.public-subnet-2.id}"]
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 }
 
 #Target group
