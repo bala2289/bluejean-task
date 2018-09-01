@@ -1,4 +1,4 @@
-### bluejeans-task
+### Bluejeans-task
 Dockerized API server deployed behind ALB in AWS
 
 Please make the following changes before doing a terraform plan.
