@@ -1,4 +1,4 @@
-# bluejeans-task
+### bluejeans-task
 Dockerized API server deployed behind ALB in AWS
 
 Please make the following changes before doing a terraform plan.
@@ -28,16 +28,17 @@ Webserver will be bootstrapped using the install.sh script which deploys the doc
 ### API usage
 
 
-# Endpoint: http://ALB-DNS/api/v1.0/tasks
+#### Endpoint: http://ALB-DNS/api/v1.0/tasks
 
 Get:  Display current tasks
 
 **example** 
+
 curl http://ALB-DNS/api/v1.0/tasks
 
 # Post:  Post accepts two key pairs. Title and Description.
 
-**example:**
+**example**
 
 curl -i -H "Content-Type: application/json" -X POST -d "{\"title\":\"redjeans\", \"description\":\"Im wearing redjeans\"}" "http://ALB-DNS/api/v1.0/tasks"
 
