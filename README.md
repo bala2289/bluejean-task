@@ -33,11 +33,13 @@ Please make the following changes before doing a terraform plan.
   $ git clone  git@github.com:bala2289/bluejeans-task.git
 2. Install terraform based on your distribution. [Terraform](https://www.terraform.io/intro/getting-started/install.html)
 3. Initialize terraform.
-    **$ cd bala2289/bluejeans-task; terraform init.**
+    **$ cd bluejeans-task; terraform init.**
 4. Create a terraform deploy plan.
     **$ terraform plan -out tf.out**
 5. Apply the plan.
     **$ terraform apply "tf.out"**
+6. Destroy the setup.
+    **$ terraform destroy**
 
 **Note:1 ensure api keys have been added to provider.tf before plan/apply.**
 
